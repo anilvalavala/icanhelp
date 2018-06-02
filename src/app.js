@@ -12,32 +12,6 @@ import './styles/styles.scss';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
-
-applicationStore.dispatch(addHelpItem(
-    {
-        id: uuid(),
-        title: 'books',
-        description: 'K.G books', 
-        fromDate: 1, 
-        toDate: 321, 
-        email: 'anilkumar.v@hotmail.com',
-        phone: '9545947627'
-    }));
-
-const newItem = applicationStore.dispatch(addHelpItem(
-    {
-        id: uuid(),
-        title: 'food',
-        description: 'vegetarian food', 
-        fromDate: 11, 
-        toDate: 50, 
-        email: 'anilkumar.v@hotmail.com',
-        phone: '9545947627'
-    }));
-
-const state = applicationStore.getState();
-console.log(filteredHelpItems(state.helpItems, state.filters));
-
 const JSX = () => {
     return (
         <Provider store={applicationStore}>
