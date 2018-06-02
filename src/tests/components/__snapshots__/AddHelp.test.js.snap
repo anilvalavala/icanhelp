@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test AddHelp component, if it is rendering correctly 1`] = `
+<div>
+  Add Help
+  <HelpForm
+    onSubmit={[Function]}
+  />
+</div>
+`;

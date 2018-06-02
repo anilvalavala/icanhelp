@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test PageNotFound component 1`] = `
+<div>
+  <h1>
+    Requested page was not found
+  </h1>
+  <Link
+    replace={false}
+    to="/"
+  >
+    HOME
+  </Link>
+</div>
+`;

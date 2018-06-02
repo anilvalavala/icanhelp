@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test HelpItems component by passing HelpItems 1`] = `
+<div>
+  <div>
+    <h1>
+      Help Items
+    </h1>
+    <div
+      key="1"
+    >
+      <HelpItemDetails
+        helpItem={
+          Object {
+            "description": "Food available",
+            "email": "anilkumar.v@hotmail.com",
+            "fromDate": -86400000,
+            "id": 1,
+            "phone": "9545947627",
+            "title": "Food",
+            "toDate": 86400000,
+          }
+        }
+      />
+      <br />
+    </div>
+    <div
+      key="2"
+    >
+      <HelpItemDetails
+        helpItem={
+          Object {
+            "description": "K.G books",
+            "email": "anilkumar.v@hotmail.com",
+            "fromDate": 86400000,
+            "id": 2,
+            "phone": "9545947627",
+            "title": "books",
+            "toDate": 259200000,
+          }
+        }
+      />
+      <br />
+    </div>
+    <div
+      key="3"
+    >
+      <HelpItemDetails
+        helpItem={
+          Object {
+            "description": "Clothes",
+            "email": "anilkumar.v@hotmail.com",
+            "fromDate": 345600000,
+            "id": 3,
+            "phone": "9545947627",
+            "title": "Clothes",
+            "toDate": 518400000,
+          }
+        }
+      />
+      <br />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test HelpItems component without passing helpItems 1`] = `
+<div>
+  <p>
+    No Help Items Found
+  </p>
+</div>
+`;

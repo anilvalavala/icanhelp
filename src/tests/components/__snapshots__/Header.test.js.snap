@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Header compoenent 1`] = `
+<div
+  className="header"
+>
+  <Link
+    className="header__link"
+    replace={false}
+    to="/"
+  >
+    Home
+  </Link>
+  <Link
+    className="header__link"
+    replace={false}
+    to="/about"
+  >
+    About
+  </Link>
+  <Link
+    className="header__link"
+    replace={false}
+    to="/feedback"
+  >
+    Feedback
+  </Link>
+</div>
+`;

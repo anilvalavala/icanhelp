@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test EditHelp component to see if it is rendering correctly 1`] = `
+<div>
+  <HelpForm
+    helpItem={
+      Object {
+        "description": "Food available",
+        "email": "anilkumar.v@hotmail.com",
+        "fromDate": -86400000,
+        "id": 1,
+        "phone": "9545947627",
+        "title": "Food",
+        "toDate": 86400000,
+      }
+    }
+    onSubmit={[Function]}
+  />
+</div>
+`;

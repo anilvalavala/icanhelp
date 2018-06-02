@@ -1,0 +1,963 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test HelpForm for error message, when submitted without valid data 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    Help Form to Add/Edit Help item 
+    <br />
+    <div>
+      Title:
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+     
+    <br />
+    <div>
+      Description:
+      <textarea
+        onChange={[Function]}
+        value=""
+      />
+    </div>
+     
+    <br />
+    <div>
+      Available From:
+      <withStyles(SingleDatePicker)
+        anchorDirection="left"
+        appendToBody={false}
+        block={false}
+        calendarInfoPosition="bottom"
+        customCloseIcon={null}
+        customInputIcon={null}
+        date={"1970-01-01T00:00:00.000Z"}
+        daySize={39}
+        disableScroll={false}
+        disabled={false}
+        displayFormat={[Function]}
+        enableOutsideDays={false}
+        firstDayOfWeek={null}
+        focused={true}
+        hideKeyboardShortcutsPanel={false}
+        horizontalMargin={0}
+        id="date"
+        initialVisibleMonth={null}
+        inputIconPosition="before"
+        isDayBlocked={[Function]}
+        isDayHighlighted={[Function]}
+        isOutsideRange={[Function]}
+        isRTL={false}
+        keepFocusOnInput={false}
+        keepOpenOnDateSelect={false}
+        monthFormat="MMMM YYYY"
+        navNext={null}
+        navPrev={null}
+        noBorder={false}
+        numberOfMonths={1}
+        onClose={[Function]}
+        onDateChange={[Function]}
+        onFocusChange={[Function]}
+        onNextMonthClick={[Function]}
+        onPrevMonthClick={[Function]}
+        openDirection="down"
+        orientation="horizontal"
+        phrases={
+          Object {
+            "calendarLabel": "Calendar",
+            "chooseAvailableDate": [Function],
+            "clearDate": "Clear Date",
+            "closeDatePicker": "Close",
+            "dateIsSelected": [Function],
+            "dateIsUnavailable": [Function],
+            "enterKey": "Enter key",
+            "escape": "Escape key",
+            "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+            "homeEnd": "Home and end keys",
+            "jumpToNextMonth": "Move forward to switch to the next month.",
+            "jumpToPrevMonth": "Move backward to switch to the previous month.",
+            "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+            "keyboardShortcuts": "Keyboard Shortcuts",
+            "leftArrowRightArrow": "Right and left arrow keys",
+            "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+            "moveFocusByOneMonth": "Switch months.",
+            "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+            "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+            "openThisPanel": "Open this panel.",
+            "pageUpPageDown": "page up and page down keys",
+            "questionMark": "Question mark",
+            "returnFocusToInput": "Return to the date input field.",
+            "selectFocusedDate": "Select the date in focus.",
+            "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+            "upArrowDownArrow": "up and down arrow keys",
+          }
+        }
+        placeholder="Date"
+        readOnly={false}
+        regular={false}
+        renderCalendarInfo={null}
+        renderDayContents={null}
+        renderMonth={null}
+        reopenPickerOnClearDate={false}
+        required={false}
+        screenReaderInputMessage=""
+        showClearDate={false}
+        showDefaultInputIcon={false}
+        small={false}
+        verticalHeight={null}
+        verticalSpacing={22}
+        weekDayFormat="dd"
+        withFullScreenPortal={false}
+        withPortal={false}
+      />
+    </div>
+     
+    <br />
+    <div>
+      Available Upto:
+      <withStyles(SingleDatePicker)
+        anchorDirection="left"
+        appendToBody={false}
+        block={false}
+        calendarInfoPosition="bottom"
+        customCloseIcon={null}
+        customInputIcon={null}
+        date={"1970-01-01T00:00:00.000Z"}
+        daySize={39}
+        disableScroll={false}
+        disabled={false}
+        displayFormat={[Function]}
+        enableOutsideDays={false}
+        firstDayOfWeek={null}
+        focused={true}
+        hideKeyboardShortcutsPanel={false}
+        horizontalMargin={0}
+        id="date"
+        initialVisibleMonth={null}
+        inputIconPosition="before"
+        isDayBlocked={[Function]}
+        isDayHighlighted={[Function]}
+        isOutsideRange={[Function]}
+        isRTL={false}
+        keepFocusOnInput={false}
+        keepOpenOnDateSelect={false}
+        monthFormat="MMMM YYYY"
+        navNext={null}
+        navPrev={null}
+        noBorder={false}
+        numberOfMonths={1}
+        onClose={[Function]}
+        onDateChange={[Function]}
+        onFocusChange={[Function]}
+        onNextMonthClick={[Function]}
+        onPrevMonthClick={[Function]}
+        openDirection="down"
+        orientation="horizontal"
+        phrases={
+          Object {
+            "calendarLabel": "Calendar",
+            "chooseAvailableDate": [Function],
+            "clearDate": "Clear Date",
+            "closeDatePicker": "Close",
+            "dateIsSelected": [Function],
+            "dateIsUnavailable": [Function],
+            "enterKey": "Enter key",
+            "escape": "Escape key",
+            "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+            "homeEnd": "Home and end keys",
+            "jumpToNextMonth": "Move forward to switch to the next month.",
+            "jumpToPrevMonth": "Move backward to switch to the previous month.",
+            "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+            "keyboardShortcuts": "Keyboard Shortcuts",
+            "leftArrowRightArrow": "Right and left arrow keys",
+            "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+            "moveFocusByOneMonth": "Switch months.",
+            "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+            "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+            "openThisPanel": "Open this panel.",
+            "pageUpPageDown": "page up and page down keys",
+            "questionMark": "Question mark",
+            "returnFocusToInput": "Return to the date input field.",
+            "selectFocusedDate": "Select the date in focus.",
+            "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+            "upArrowDownArrow": "up and down arrow keys",
+          }
+        }
+        placeholder="Date"
+        readOnly={false}
+        regular={false}
+        renderCalendarInfo={null}
+        renderDayContents={null}
+        renderMonth={null}
+        reopenPickerOnClearDate={false}
+        required={false}
+        screenReaderInputMessage=""
+        showClearDate={false}
+        showDefaultInputIcon={false}
+        small={false}
+        verticalHeight={null}
+        verticalSpacing={22}
+        weekDayFormat="dd"
+        withFullScreenPortal={false}
+        withPortal={false}
+      />
+    </div>
+     
+    <br />
+    <div>
+      Email: 
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+     
+    <br />
+    <div>
+      Phone: 
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+       
+      <br />
+    </div>
+     
+    <br />
+    <button>
+      Save
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Test HelpForm for error message, when submitted without valid data 2`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    Help Form to Add/Edit Help item 
+    <br />
+    <div>
+      Title:
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+      <p>
+        Title field can't be empty
+      </p>
+    </div>
+     
+    <br />
+    <div>
+      Description:
+      <textarea
+        onChange={[Function]}
+        value=""
+      />
+      <p>
+        Title field can't be empty
+      </p>
+    </div>
+     
+    <br />
+    <div>
+      Available From:
+      <withStyles(SingleDatePicker)
+        anchorDirection="left"
+        appendToBody={false}
+        block={false}
+        calendarInfoPosition="bottom"
+        customCloseIcon={null}
+        customInputIcon={null}
+        date={"1970-01-01T00:00:00.000Z"}
+        daySize={39}
+        disableScroll={false}
+        disabled={false}
+        displayFormat={[Function]}
+        enableOutsideDays={false}
+        firstDayOfWeek={null}
+        focused={true}
+        hideKeyboardShortcutsPanel={false}
+        horizontalMargin={0}
+        id="date"
+        initialVisibleMonth={null}
+        inputIconPosition="before"
+        isDayBlocked={[Function]}
+        isDayHighlighted={[Function]}
+        isOutsideRange={[Function]}
+        isRTL={false}
+        keepFocusOnInput={false}
+        keepOpenOnDateSelect={false}
+        monthFormat="MMMM YYYY"
+        navNext={null}
+        navPrev={null}
+        noBorder={false}
+        numberOfMonths={1}
+        onClose={[Function]}
+        onDateChange={[Function]}
+        onFocusChange={[Function]}
+        onNextMonthClick={[Function]}
+        onPrevMonthClick={[Function]}
+        openDirection="down"
+        orientation="horizontal"
+        phrases={
+          Object {
+            "calendarLabel": "Calendar",
+            "chooseAvailableDate": [Function],
+            "clearDate": "Clear Date",
+            "closeDatePicker": "Close",
+            "dateIsSelected": [Function],
+            "dateIsUnavailable": [Function],
+            "enterKey": "Enter key",
+            "escape": "Escape key",
+            "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+            "homeEnd": "Home and end keys",
+            "jumpToNextMonth": "Move forward to switch to the next month.",
+            "jumpToPrevMonth": "Move backward to switch to the previous month.",
+            "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+            "keyboardShortcuts": "Keyboard Shortcuts",
+            "leftArrowRightArrow": "Right and left arrow keys",
+            "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+            "moveFocusByOneMonth": "Switch months.",
+            "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+            "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+            "openThisPanel": "Open this panel.",
+            "pageUpPageDown": "page up and page down keys",
+            "questionMark": "Question mark",
+            "returnFocusToInput": "Return to the date input field.",
+            "selectFocusedDate": "Select the date in focus.",
+            "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+            "upArrowDownArrow": "up and down arrow keys",
+          }
+        }
+        placeholder="Date"
+        readOnly={false}
+        regular={false}
+        renderCalendarInfo={null}
+        renderDayContents={null}
+        renderMonth={null}
+        reopenPickerOnClearDate={false}
+        required={false}
+        screenReaderInputMessage=""
+        showClearDate={false}
+        showDefaultInputIcon={false}
+        small={false}
+        verticalHeight={null}
+        verticalSpacing={22}
+        weekDayFormat="dd"
+        withFullScreenPortal={false}
+        withPortal={false}
+      />
+    </div>
+     
+    <br />
+    <div>
+      Available Upto:
+      <withStyles(SingleDatePicker)
+        anchorDirection="left"
+        appendToBody={false}
+        block={false}
+        calendarInfoPosition="bottom"
+        customCloseIcon={null}
+        customInputIcon={null}
+        date={"1970-01-01T00:00:00.000Z"}
+        daySize={39}
+        disableScroll={false}
+        disabled={false}
+        displayFormat={[Function]}
+        enableOutsideDays={false}
+        firstDayOfWeek={null}
+        focused={true}
+        hideKeyboardShortcutsPanel={false}
+        horizontalMargin={0}
+        id="date"
+        initialVisibleMonth={null}
+        inputIconPosition="before"
+        isDayBlocked={[Function]}
+        isDayHighlighted={[Function]}
+        isOutsideRange={[Function]}
+        isRTL={false}
+        keepFocusOnInput={false}
+        keepOpenOnDateSelect={false}
+        monthFormat="MMMM YYYY"
+        navNext={null}
+        navPrev={null}
+        noBorder={false}
+        numberOfMonths={1}
+        onClose={[Function]}
+        onDateChange={[Function]}
+        onFocusChange={[Function]}
+        onNextMonthClick={[Function]}
+        onPrevMonthClick={[Function]}
+        openDirection="down"
+        orientation="horizontal"
+        phrases={
+          Object {
+            "calendarLabel": "Calendar",
+            "chooseAvailableDate": [Function],
+            "clearDate": "Clear Date",
+            "closeDatePicker": "Close",
+            "dateIsSelected": [Function],
+            "dateIsUnavailable": [Function],
+            "enterKey": "Enter key",
+            "escape": "Escape key",
+            "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+            "homeEnd": "Home and end keys",
+            "jumpToNextMonth": "Move forward to switch to the next month.",
+            "jumpToPrevMonth": "Move backward to switch to the previous month.",
+            "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+            "keyboardShortcuts": "Keyboard Shortcuts",
+            "leftArrowRightArrow": "Right and left arrow keys",
+            "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+            "moveFocusByOneMonth": "Switch months.",
+            "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+            "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+            "openThisPanel": "Open this panel.",
+            "pageUpPageDown": "page up and page down keys",
+            "questionMark": "Question mark",
+            "returnFocusToInput": "Return to the date input field.",
+            "selectFocusedDate": "Select the date in focus.",
+            "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+            "upArrowDownArrow": "up and down arrow keys",
+          }
+        }
+        placeholder="Date"
+        readOnly={false}
+        regular={false}
+        renderCalendarInfo={null}
+        renderDayContents={null}
+        renderMonth={null}
+        reopenPickerOnClearDate={false}
+        required={false}
+        screenReaderInputMessage=""
+        showClearDate={false}
+        showDefaultInputIcon={false}
+        small={false}
+        verticalHeight={null}
+        verticalSpacing={22}
+        weekDayFormat="dd"
+        withFullScreenPortal={false}
+        withPortal={false}
+      />
+    </div>
+     
+    <br />
+    <div>
+      Email: 
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+     
+    <br />
+    <div>
+      Phone: 
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+       
+      <br />
+    </div>
+     
+    <br />
+    <button>
+      Save
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Test HelpForm with data 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    Help Form to Add/Edit Help item 
+    <br />
+    <div>
+      Title:
+      <input
+        onChange={[Function]}
+        type="text"
+        value="Food"
+      />
+    </div>
+     
+    <br />
+    <div>
+      Description:
+      <textarea
+        onChange={[Function]}
+        value="Food available"
+      />
+    </div>
+     
+    <br />
+    <div>
+      Available From:
+      <withStyles(SingleDatePicker)
+        anchorDirection="left"
+        appendToBody={false}
+        block={false}
+        calendarInfoPosition="bottom"
+        customCloseIcon={null}
+        customInputIcon={null}
+        date={"1969-12-31T00:00:00.000Z"}
+        daySize={39}
+        disableScroll={false}
+        disabled={false}
+        displayFormat={[Function]}
+        enableOutsideDays={false}
+        firstDayOfWeek={null}
+        focused={true}
+        hideKeyboardShortcutsPanel={false}
+        horizontalMargin={0}
+        id="date"
+        initialVisibleMonth={null}
+        inputIconPosition="before"
+        isDayBlocked={[Function]}
+        isDayHighlighted={[Function]}
+        isOutsideRange={[Function]}
+        isRTL={false}
+        keepFocusOnInput={false}
+        keepOpenOnDateSelect={false}
+        monthFormat="MMMM YYYY"
+        navNext={null}
+        navPrev={null}
+        noBorder={false}
+        numberOfMonths={1}
+        onClose={[Function]}
+        onDateChange={[Function]}
+        onFocusChange={[Function]}
+        onNextMonthClick={[Function]}
+        onPrevMonthClick={[Function]}
+        openDirection="down"
+        orientation="horizontal"
+        phrases={
+          Object {
+            "calendarLabel": "Calendar",
+            "chooseAvailableDate": [Function],
+            "clearDate": "Clear Date",
+            "closeDatePicker": "Close",
+            "dateIsSelected": [Function],
+            "dateIsUnavailable": [Function],
+            "enterKey": "Enter key",
+            "escape": "Escape key",
+            "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+            "homeEnd": "Home and end keys",
+            "jumpToNextMonth": "Move forward to switch to the next month.",
+            "jumpToPrevMonth": "Move backward to switch to the previous month.",
+            "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+            "keyboardShortcuts": "Keyboard Shortcuts",
+            "leftArrowRightArrow": "Right and left arrow keys",
+            "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+            "moveFocusByOneMonth": "Switch months.",
+            "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+            "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+            "openThisPanel": "Open this panel.",
+            "pageUpPageDown": "page up and page down keys",
+            "questionMark": "Question mark",
+            "returnFocusToInput": "Return to the date input field.",
+            "selectFocusedDate": "Select the date in focus.",
+            "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+            "upArrowDownArrow": "up and down arrow keys",
+          }
+        }
+        placeholder="Date"
+        readOnly={false}
+        regular={false}
+        renderCalendarInfo={null}
+        renderDayContents={null}
+        renderMonth={null}
+        reopenPickerOnClearDate={false}
+        required={false}
+        screenReaderInputMessage=""
+        showClearDate={false}
+        showDefaultInputIcon={false}
+        small={false}
+        verticalHeight={null}
+        verticalSpacing={22}
+        weekDayFormat="dd"
+        withFullScreenPortal={false}
+        withPortal={false}
+      />
+    </div>
+     
+    <br />
+    <div>
+      Available Upto:
+      <withStyles(SingleDatePicker)
+        anchorDirection="left"
+        appendToBody={false}
+        block={false}
+        calendarInfoPosition="bottom"
+        customCloseIcon={null}
+        customInputIcon={null}
+        date={"1970-01-02T00:00:00.000Z"}
+        daySize={39}
+        disableScroll={false}
+        disabled={false}
+        displayFormat={[Function]}
+        enableOutsideDays={false}
+        firstDayOfWeek={null}
+        focused={true}
+        hideKeyboardShortcutsPanel={false}
+        horizontalMargin={0}
+        id="date"
+        initialVisibleMonth={null}
+        inputIconPosition="before"
+        isDayBlocked={[Function]}
+        isDayHighlighted={[Function]}
+        isOutsideRange={[Function]}
+        isRTL={false}
+        keepFocusOnInput={false}
+        keepOpenOnDateSelect={false}
+        monthFormat="MMMM YYYY"
+        navNext={null}
+        navPrev={null}
+        noBorder={false}
+        numberOfMonths={1}
+        onClose={[Function]}
+        onDateChange={[Function]}
+        onFocusChange={[Function]}
+        onNextMonthClick={[Function]}
+        onPrevMonthClick={[Function]}
+        openDirection="down"
+        orientation="horizontal"
+        phrases={
+          Object {
+            "calendarLabel": "Calendar",
+            "chooseAvailableDate": [Function],
+            "clearDate": "Clear Date",
+            "closeDatePicker": "Close",
+            "dateIsSelected": [Function],
+            "dateIsUnavailable": [Function],
+            "enterKey": "Enter key",
+            "escape": "Escape key",
+            "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+            "homeEnd": "Home and end keys",
+            "jumpToNextMonth": "Move forward to switch to the next month.",
+            "jumpToPrevMonth": "Move backward to switch to the previous month.",
+            "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+            "keyboardShortcuts": "Keyboard Shortcuts",
+            "leftArrowRightArrow": "Right and left arrow keys",
+            "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+            "moveFocusByOneMonth": "Switch months.",
+            "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+            "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+            "openThisPanel": "Open this panel.",
+            "pageUpPageDown": "page up and page down keys",
+            "questionMark": "Question mark",
+            "returnFocusToInput": "Return to the date input field.",
+            "selectFocusedDate": "Select the date in focus.",
+            "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+            "upArrowDownArrow": "up and down arrow keys",
+          }
+        }
+        placeholder="Date"
+        readOnly={false}
+        regular={false}
+        renderCalendarInfo={null}
+        renderDayContents={null}
+        renderMonth={null}
+        reopenPickerOnClearDate={false}
+        required={false}
+        screenReaderInputMessage=""
+        showClearDate={false}
+        showDefaultInputIcon={false}
+        small={false}
+        verticalHeight={null}
+        verticalSpacing={22}
+        weekDayFormat="dd"
+        withFullScreenPortal={false}
+        withPortal={false}
+      />
+    </div>
+     
+    <br />
+    <div>
+      Email: 
+      <input
+        onChange={[Function]}
+        type="text"
+        value="anilkumar.v@hotmail.com"
+      />
+    </div>
+     
+    <br />
+    <div>
+      Phone: 
+      <input
+        onChange={[Function]}
+        type="text"
+        value="9545947627"
+      />
+       
+      <br />
+    </div>
+     
+    <br />
+    <button>
+      Save
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Test HelpForm without data 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    Help Form to Add/Edit Help item 
+    <br />
+    <div>
+      Title:
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+     
+    <br />
+    <div>
+      Description:
+      <textarea
+        onChange={[Function]}
+        value=""
+      />
+    </div>
+     
+    <br />
+    <div>
+      Available From:
+      <withStyles(SingleDatePicker)
+        anchorDirection="left"
+        appendToBody={false}
+        block={false}
+        calendarInfoPosition="bottom"
+        customCloseIcon={null}
+        customInputIcon={null}
+        date={"1970-01-01T00:00:00.000Z"}
+        daySize={39}
+        disableScroll={false}
+        disabled={false}
+        displayFormat={[Function]}
+        enableOutsideDays={false}
+        firstDayOfWeek={null}
+        focused={true}
+        hideKeyboardShortcutsPanel={false}
+        horizontalMargin={0}
+        id="date"
+        initialVisibleMonth={null}
+        inputIconPosition="before"
+        isDayBlocked={[Function]}
+        isDayHighlighted={[Function]}
+        isOutsideRange={[Function]}
+        isRTL={false}
+        keepFocusOnInput={false}
+        keepOpenOnDateSelect={false}
+        monthFormat="MMMM YYYY"
+        navNext={null}
+        navPrev={null}
+        noBorder={false}
+        numberOfMonths={1}
+        onClose={[Function]}
+        onDateChange={[Function]}
+        onFocusChange={[Function]}
+        onNextMonthClick={[Function]}
+        onPrevMonthClick={[Function]}
+        openDirection="down"
+        orientation="horizontal"
+        phrases={
+          Object {
+            "calendarLabel": "Calendar",
+            "chooseAvailableDate": [Function],
+            "clearDate": "Clear Date",
+            "closeDatePicker": "Close",
+            "dateIsSelected": [Function],
+            "dateIsUnavailable": [Function],
+            "enterKey": "Enter key",
+            "escape": "Escape key",
+            "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+            "homeEnd": "Home and end keys",
+            "jumpToNextMonth": "Move forward to switch to the next month.",
+            "jumpToPrevMonth": "Move backward to switch to the previous month.",
+            "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+            "keyboardShortcuts": "Keyboard Shortcuts",
+            "leftArrowRightArrow": "Right and left arrow keys",
+            "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+            "moveFocusByOneMonth": "Switch months.",
+            "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+            "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+            "openThisPanel": "Open this panel.",
+            "pageUpPageDown": "page up and page down keys",
+            "questionMark": "Question mark",
+            "returnFocusToInput": "Return to the date input field.",
+            "selectFocusedDate": "Select the date in focus.",
+            "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+            "upArrowDownArrow": "up and down arrow keys",
+          }
+        }
+        placeholder="Date"
+        readOnly={false}
+        regular={false}
+        renderCalendarInfo={null}
+        renderDayContents={null}
+        renderMonth={null}
+        reopenPickerOnClearDate={false}
+        required={false}
+        screenReaderInputMessage=""
+        showClearDate={false}
+        showDefaultInputIcon={false}
+        small={false}
+        verticalHeight={null}
+        verticalSpacing={22}
+        weekDayFormat="dd"
+        withFullScreenPortal={false}
+        withPortal={false}
+      />
+    </div>
+     
+    <br />
+    <div>
+      Available Upto:
+      <withStyles(SingleDatePicker)
+        anchorDirection="left"
+        appendToBody={false}
+        block={false}
+        calendarInfoPosition="bottom"
+        customCloseIcon={null}
+        customInputIcon={null}
+        date={"1970-01-01T00:00:00.000Z"}
+        daySize={39}
+        disableScroll={false}
+        disabled={false}
+        displayFormat={[Function]}
+        enableOutsideDays={false}
+        firstDayOfWeek={null}
+        focused={true}
+        hideKeyboardShortcutsPanel={false}
+        horizontalMargin={0}
+        id="date"
+        initialVisibleMonth={null}
+        inputIconPosition="before"
+        isDayBlocked={[Function]}
+        isDayHighlighted={[Function]}
+        isOutsideRange={[Function]}
+        isRTL={false}
+        keepFocusOnInput={false}
+        keepOpenOnDateSelect={false}
+        monthFormat="MMMM YYYY"
+        navNext={null}
+        navPrev={null}
+        noBorder={false}
+        numberOfMonths={1}
+        onClose={[Function]}
+        onDateChange={[Function]}
+        onFocusChange={[Function]}
+        onNextMonthClick={[Function]}
+        onPrevMonthClick={[Function]}
+        openDirection="down"
+        orientation="horizontal"
+        phrases={
+          Object {
+            "calendarLabel": "Calendar",
+            "chooseAvailableDate": [Function],
+            "clearDate": "Clear Date",
+            "closeDatePicker": "Close",
+            "dateIsSelected": [Function],
+            "dateIsUnavailable": [Function],
+            "enterKey": "Enter key",
+            "escape": "Escape key",
+            "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+            "homeEnd": "Home and end keys",
+            "jumpToNextMonth": "Move forward to switch to the next month.",
+            "jumpToPrevMonth": "Move backward to switch to the previous month.",
+            "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+            "keyboardShortcuts": "Keyboard Shortcuts",
+            "leftArrowRightArrow": "Right and left arrow keys",
+            "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+            "moveFocusByOneMonth": "Switch months.",
+            "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+            "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+            "openThisPanel": "Open this panel.",
+            "pageUpPageDown": "page up and page down keys",
+            "questionMark": "Question mark",
+            "returnFocusToInput": "Return to the date input field.",
+            "selectFocusedDate": "Select the date in focus.",
+            "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+            "upArrowDownArrow": "up and down arrow keys",
+          }
+        }
+        placeholder="Date"
+        readOnly={false}
+        regular={false}
+        renderCalendarInfo={null}
+        renderDayContents={null}
+        renderMonth={null}
+        reopenPickerOnClearDate={false}
+        required={false}
+        screenReaderInputMessage=""
+        showClearDate={false}
+        showDefaultInputIcon={false}
+        small={false}
+        verticalHeight={null}
+        verticalSpacing={22}
+        weekDayFormat="dd"
+        withFullScreenPortal={false}
+        withPortal={false}
+      />
+    </div>
+     
+    <br />
+    <div>
+      Email: 
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+     
+    <br />
+    <div>
+      Phone: 
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+       
+      <br />
+    </div>
+     
+    <br />
+    <button>
+      Save
+    </button>
+  </form>
+</div>
+`;

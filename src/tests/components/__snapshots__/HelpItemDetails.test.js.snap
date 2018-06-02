@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test HelpItemDetails component by passing a test help item 1`] = `
+<div>
+  <div>
+    <Link
+      replace={false}
+      to="/editHelp/2"
+    >
+       
+      books
+       
+    </Link>
+     
+    <br />
+    Description: 
+    K.G books
+     
+    <br />
+    Available From: 
+    86400000
+     
+    <br />
+    Available Upto: 
+    259200000
+     
+    <br />
+    Email: 
+    anilkumar.v@hotmail.com
+     
+    <br />
+    Phone: 
+    9545947627
+     
+    <br />
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Test HelpItemDetails component without passing a test help item 1`] = `
+<div>
+  <div>
+    <Link
+      replace={false}
+      to="/editHelp/undefined"
+    >
+       
+       
+    </Link>
+     
+    <br />
+    Description: 
+     
+    <br />
+    Available From: 
+     
+    <br />
+    Available Upto: 
+     
+    <br />
+    Email: 
+     
+    <br />
+    Phone: 
+     
+    <br />
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+</div>
+`;
