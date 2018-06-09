@@ -1,6 +1,15 @@
 const path = require('path');
+//const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = {
+//module.exports exporting a function
+//This helps us to pass additional params to function that helps us to
+//identify current environment
+
+module.exports = (env) => {
+    const isProduction = env === 'production';
+    //ExtractTextPlugin constructor takes name of output file that need to be created as argument
+    //const CSSExtract = new ExtractTextPlugin('styles.css');
+    return {
     entry: './src/app.js',
     output: {
         filename: 'bundle.js',
@@ -14,18 +23,61 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                use: [ 
-                      'style-loader',
-                      'css-loader',
-                      'sass-loader'
-                     ],
+                //use: CSSExtract.extract({
+                    use: [
+                        {
+                        loader: 'css-loader',
+                        // options: {
+                        //     sourceMap: true
+                        // }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        // options:{
+                        //     sourceMap: true
+                        // }
+                    }
+                    ],
+                //}),
                 test: /\.s?css/
             }
         ]
     },
-    devtool: 'cheap-module-eval-source-map',
+    devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'public'),
         historyApiFallback: true
     }
 }
+};
+
+//module.exports is exporting an object
+// module.exports = {
+//     entry: './src/app.js',
+//     output: {
+//         filename: 'bundle.js',
+//         path: path.join(__dirname, 'public')
+//     },
+//     module: {
+//         rules:[
+//             {
+//                 loader: 'babel-loader',
+//                 test: /\.js$/,
+//                 exclude: /node_modules/
+//             },
+//             {
+//                 use: [ 
+//                       'style-loader',
+//                       'css-loader',
+//                       'sass-loader'
+//                      ],
+//                 test: /\.s?css/
+//             }
+//         ]
+//     },
+//     devtool: 'cheap-module-eval-source-map',
+//     devServer: {
+//         contentBase: path.join(__dirname, 'public'),
+//         historyApiFallback: true
+//     }
+// }

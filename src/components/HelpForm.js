@@ -16,7 +16,7 @@ export default class HelpForm extends React.Component {
             toDateFocused: true,
             phone: props.helpItem ? props.helpItem.phone : '',
             email: props.helpItem ? props.helpItem.email : '', 
-            isPageInvalid: false,
+            isPageInvalid: '',
             titleError: '',
             descriptionError: '',
             phoneError: '',
@@ -28,23 +28,60 @@ export default class HelpForm extends React.Component {
     setTitle = (e) => {
         const title = e.target.value;
         this.setState(() => ({ title }));
+        if(!this.state.title || this.state.title.length === 0){
+            this.setState(() => ({
+                titleError: 'Title field can\'t be empty',
+            }));
+        }
+        else{
+            this.setState(() => ({
+                titleError: '',
+            }));
+        }
     }
     setDescription = (e) => {
         const description = e.target.value;
         this.setState(() => ({ description }));
+        if(!this.state.description){
+            this.setState(() => ({
+                descriptionError: 'Description field can\'t be empty',
+            }));
+        }
+        else{
+            this.setState(() => ({
+                descriptionError: '',
+            }));
+        }
     }
     setEmail = (e) => {
         const email = e.target.value;
-        if(email && email.match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/))
+        this.setState(() => ({ email }));
+        if(this.state.email && !this.state.email.match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/))
         {
-            this.setState(() => ({ email }));
+            this.setState(() => ({
+                emailError: 'Email id is not valid',
+            }));
+        }
+        else{
+            this.setState(() => ({
+                emailError: '',
+            }));
         }
     }
     setPhoneNumber = (e) => {
         const phone = e.target.value;
-        if(phone && phone.match(/^[6-9]\d{9}$/))
+        this.setState(() => ({ phone }));
+        if(this.state.phone && !this.state.phone.match(/^[6-9]\d{9}$/))
         {
-            this.setState(() => ({ phone }));
+            this.setState(() => ({
+                phoneError: 'Phone number must start with 6/7/9 and should contain 10 digits',
+            }));
+        }
+        else
+        {
+            this.setState(() => ({
+                phoneError: '',
+            }));
         }
     }
     setFromDate = (fromDate) => {
@@ -59,62 +96,39 @@ export default class HelpForm extends React.Component {
         if(toDate){
             this.setState(() => ({ toDate }));
         }
+        if(this.state.fromDate > this.state.toDate){
+            this.setState(() => ({
+                dateRangeError: "To Date should be greater than From Date",
+            }));
+        }
+        else{
+            this.setState(() => ({
+                dateRangeError: '',
+            }));
+        }
     }
     setToDateFocus = ({ focused }) => {
         this.setState(() => ({ toDateFocused: focused }));
     }
     onSubmit = (e) => {
         e.preventDefault();
-        //Title validation
-        if(!this.state.title){
-            this.setState(() => ({
-                titleError: 'Title field can\'t be empty',
-                isPageInvalid: true
-            }));
-        }else {
-            this.setState(() => ({
-                titleError: '',
-                isPageInvalid: false
-            }));
-        }
-        //Description validation
-        if(!this.state.description){
-            this.setState(() => ({
-                descriptionError: 'Description field can\'t be empty',
-                isPageInvalid: true
-            }));
-        }else {
-            this.setState(() => ({
-                descriptionError: '',
-                isPageInvalid: false
-            }));
-        }
-        //Phone number vaidation
-        if(!this.state.phone){
-            this.setState(() => ({
-                phoneError: 'Phone number must start with 6/7/9 and should contain 10 digits',
-                isPageInvalid: true
-            }));
-        }else {
-            this.setState(() => ({
-                phoneError: '',
-                isPageInvalid: false
-            }));
-        }
-        //Email validation
-        if(!this.state.email){
-            this.setState(() => ({
-                emailError: 'Email id is not valid',
-                isPageInvalid: true
-            }));
-        }else {
-            this.setState(() => ({
-                emailError: '',
-                isPageInvalid: false
-            }));
-        }
 
-        if(!this.state.isPageInvalid)
+        if(this.state.titleError || this.state.descriptionError || 
+        this.state.emailError || this.state.phoneError || 
+        this.state.dateRangeError)
+        {
+            this.setState(() => ({
+                isPageInvalid: true
+            }));
+        }
+        else
+        {
+            this.setState(() => ({
+                isPageInvalid: false
+            }));
+        }
+        
+        if(!this.state.isPageInvalid && this.state.isPageInvalid === false)
         {
             this.props.onSubmit({
                 id: this.state.id,

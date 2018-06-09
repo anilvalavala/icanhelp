@@ -16,6 +16,9 @@ test('Test HelpForm with data', () => {
 test('Test HelpForm for error message, when submitted without valid data', () => {
     const wrapper = shallow(<HelpForm />);
     expect(wrapper).toMatchSnapshot();
+    wrapper.find('input').at(0).simulate('change', {
+        target: ''
+    });
     wrapper.find('form').simulate('submit', {
         preventDefault: () => {}
     });
@@ -57,8 +60,8 @@ test('Test HelpForm for invalid Email', () => {
     wrapper.find('input').at(1).simulate('change', {
         target: { value }
     });
-    expect(wrapper.state('email')).toBe('');
-    //expect(wrapper.state('emailError')).toBe(errorMessage);
+    //expect(wrapper.state('email')).toBe('');
+    expect(wrapper.state('emailError')).toBe(errorMessage);
 });
 
 test('Test HelpForm if given input for phone field is set correctly', () => {
@@ -77,17 +80,32 @@ test('Test HelpForm for invalid phone number', () => {
     wrapper.find('input').at(2).simulate('change', {
         target: { value }
     });
-    expect(wrapper.state('phone')).toBe('');
-    //expect(wrapper.state('phoneError')).toBe(errorMessage);
+    wrapper.find('form').simulate('submit', {
+        preventDefault: () => {}
+    });
+    expect(wrapper.state('phoneError')).toBe(errorMessage);
 });
 
 //Using test spies to check whether form is submitted with proper values
 test('Test HelpForm for valid data submission', () => {
     const onSubmitSpy = jest.fn();
-    const wrapper = shallow(<HelpForm helpItem={TestHelpItems[0]} onSubmit={onSubmitSpy} />);
+    const wrapper = shallow(
+        <HelpForm helpItem={TestHelpItems[0]} 
+        onSubmit={onSubmitSpy} />
+    );
     wrapper.find('form').simulate('submit', {
         preventDefault: () => {}
     });
+    expect(wrapper.state('titleError')).toBe('');
+    expect(wrapper.state('descriptionError')).toBe('');
+    expect(wrapper.state('emailError')).toBe('');
+    expect(wrapper.state('phoneError')).toBe('');
+    expect(wrapper.state('dateRangeError')).toBe('');
+    expect(wrapper.state('title')).toBe(TestHelpItems[0].title);
+    expect(wrapper.state('description')).toBe(TestHelpItems[0].description);
+    expect(wrapper.state('email')).toBe(TestHelpItems[0].email);
+    expect(wrapper.state('phone')).toBe(TestHelpItems[0].phone);
+    expect(wrapper.state('isPageInvalid')).toBe(false);
     expect(onSubmitSpy).toHaveBeenCalledWith(TestHelpItems[0]);
 });
 

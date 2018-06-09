@@ -251,7 +251,6 @@ exports[`Test HelpForm for error message, when submitted without valid data 2`] 
       <input
         onChange={[Function]}
         type="text"
-        value=""
       />
       <p>
         Title field can't be empty
