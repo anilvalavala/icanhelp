@@ -16,7 +16,7 @@ export default class HelpForm extends React.Component {
             toDateFocused: true,
             phone: props.helpItem ? props.helpItem.phone : '',
             email: props.helpItem ? props.helpItem.email : '', 
-            isPageInvalid: '',
+            isPageInvalid: false,
             titleError: '',
             descriptionError: '',
             phoneError: '',
@@ -112,7 +112,8 @@ export default class HelpForm extends React.Component {
     }
     onSubmit = (e) => {
         e.preventDefault();
-
+        console.log(this.state.isPageInvalid);
+        
         if(this.state.titleError || this.state.descriptionError || 
         this.state.emailError || this.state.phoneError || 
         this.state.dateRangeError)
@@ -127,8 +128,9 @@ export default class HelpForm extends React.Component {
                 isPageInvalid: false
             }));
         }
-        
-        if(!this.state.isPageInvalid && this.state.isPageInvalid === false)
+        console.log(this.state.isPageInvalid);
+
+        if(this.state.isPageInvalid === false)
         {
             this.props.onSubmit({
                 id: this.state.id,
