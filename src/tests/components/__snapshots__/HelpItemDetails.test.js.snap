@@ -18,11 +18,11 @@ exports[`Test HelpItemDetails component by passing a test help item 1`] = `
      
     <br />
     Available From: 
-    86400000
+    January 2nd, 1970
      
     <br />
     Available Upto: 
-    259200000
+    January 4th, 1970
      
     <br />
     Email: 
@@ -58,9 +58,11 @@ exports[`Test HelpItemDetails component without passing a test help item 1`] = `
      
     <br />
     Available From: 
+    January 1st, 1970
      
     <br />
     Available Upto: 
+    January 1st, 1970
      
     <br />
     Email: 
