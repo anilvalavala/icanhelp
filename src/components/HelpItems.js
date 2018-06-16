@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import HelpItemDetails from './HelpItemDetails';
 import filteredHelpItems from '../selectors/HelpItems';
-import { deleteHelpItem } from '../actions/HelpItems';
 
 //we are exporting unconnected version also to allow testing this component
 export const HelpItems = (props) => {

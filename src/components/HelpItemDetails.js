@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import moment from 'moment';
 import { startDeleteHelpItem } from '../actions/HelpItems';
 
-const HelpItemDetails = (props) => {
+export const HelpItemDetails = (props) => {
     return(
         <div>
             <div>
@@ -24,5 +24,10 @@ const HelpItemDetails = (props) => {
     );
 }; 
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        startDeleteHelpItem: (helpItem) => dispatch(startDeleteHelpItem(helpItem))
+    }
+};
 
-export default connect()(HelpItemDetails);
+export default connect(undefined, mapDispatchToProps)(HelpItemDetails);

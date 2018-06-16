@@ -9,7 +9,7 @@ exports[`Test HelpItems component by passing HelpItems 1`] = `
     <div
       key="1"
     >
-      <HelpItemDetails
+      <Connect(HelpItemDetails)
         helpItem={
           Object {
             "description": "Food available",
@@ -27,7 +27,7 @@ exports[`Test HelpItems component by passing HelpItems 1`] = `
     <div
       key="2"
     >
-      <HelpItemDetails
+      <Connect(HelpItemDetails)
         helpItem={
           Object {
             "description": "K.G books",
@@ -45,7 +45,7 @@ exports[`Test HelpItems component by passing HelpItems 1`] = `
     <div
       key="3"
     >
-      <HelpItemDetails
+      <Connect(HelpItemDetails)
         helpItem={
           Object {
             "description": "Clothes",
