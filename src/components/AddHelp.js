@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import HelpForm from './HelpForm';
-import { addHelpItem } from '../actions/HelpItems';
+import { startAddHelpItem } from '../actions/HelpItems';
 
 export class AddHelp extends React.Component {
     onSubmit = (helpItem) => {
-        this.props.addHelpItem(helpItem);
+        this.props.startAddHelpItem(helpItem);
         this.props.history.push('/');
     };
     render(){
@@ -35,7 +35,7 @@ export class AddHelp extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addHelpItem: (helpItem) => dispatch(addHelpItem(helpItem))
+        startAddHelpItem: (helpItem) => dispatch(startAddHelpItem(helpItem))
     };
 };
 

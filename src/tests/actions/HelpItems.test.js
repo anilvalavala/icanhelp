@@ -1,9 +1,15 @@
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
 import { 
     getHelpItem, 
     addHelpItem, 
     editHelpItem, 
-    deleteHelpItem 
+    deleteHelpItem,
+    startAddHelpItem
 } from '../../actions/HelpItems';
+import database from '../../../firebase/firebase';
+
+const createMockStore = configureMockStore([thunk]);
 
 test('Test getHelpItem action', () => {
     const result = getHelpItem('TEST');
@@ -29,6 +35,35 @@ test('Test addHelpItem action', () => {
         helpItem
     });
 });
+
+test('Test asynchronous add help item', (done) => {
+    const mockStore = createMockStore({});
+
+    const newHelpItem = {
+        description: 'From asynchronous unit test',
+        fromDate: 12121212,
+        toDate: 2121212121,
+        title: 'Test',
+        email: 'test@test.com',
+        phone: '9545947627'
+    };
+
+    mockStore.dispatch(startAddHelpItem(newHelpItem)).then(() => {
+        const actions = mockStore.getActions();
+        expect(actions[0]).toEqual({
+            type: 'ADD_HELP_ITEM',
+            helpItem: {
+                id: expect.any(String),
+                ...newHelpItem
+            }
+        });
+
+        return database.ref(`helpItems/${actions[0].helpItem.id}`).once('value');
+    }).then((snapshot) => {
+        expect(snapshot.val()).toEqual(newHelpItem);
+        done();
+    });
+})
 
 test('Test editHelpItem action', () => {
     const helpItem = {
