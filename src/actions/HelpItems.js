@@ -76,3 +76,11 @@ export const deleteHelpItem = (id) => ({
     type: 'DELETE_HELP_ITEM',
     id
 });
+
+export const startDeleteHelpItem = (id) => {
+    return (dispatch) => {
+        return database.ref(`helpItems/${id}`).remove().then(() => {
+            dispatch(deleteHelpItem(id))
+        });
+    };
+};

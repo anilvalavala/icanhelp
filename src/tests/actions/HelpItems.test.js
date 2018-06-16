@@ -8,7 +8,8 @@ import {
     deleteHelpItem,
     startAddHelpItem,
     startGetHelpItem,
-    startGetAllHelpItems
+    startGetAllHelpItems,
+    startDeleteHelpItem
 } from '../../actions/HelpItems';
 import database from '../../../firebase/firebase';
 import TestHelpItems from '../fixtures/TestHelpItems';
@@ -131,5 +132,19 @@ test('Test deleteHelpItem action', () => {
     expect(result).toEqual({
         type: 'DELETE_HELP_ITEM',
         id: 1
+    });
+});
+
+test('Test asynchronous startDeleteHelpItem action', (done) => {
+    const mockStore = createMockStore({});
+    const itemToDelete = '1';
+    mockStore.dispatch(startDeleteHelpItem(itemToDelete)).then(() => {
+        const actions = mockStore.getActions();
+        
+        expect(actions[0]).toEqual({
+            type: 'DELETE_HELP_ITEM',
+            id: itemToDelete
+        });
+        done();
     });
 });
