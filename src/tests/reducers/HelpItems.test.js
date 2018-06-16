@@ -43,6 +43,15 @@ test('Test HelpItems Reducer: Get Help Item action', () => {
     expect(result).toEqual([helpItems[2]]);
 });
 
+test('Test HelpItems Reducer: Get All Help Items action', () => {
+    const action = {
+        type: 'GET_ALL_ITEMS',
+        helpItems
+    };
+    const result = helpItemsReducer(helpItems, action);
+    expect(result).toEqual(helpItems);
+});
+
 test('Test HelpItems Reducer: Add Help Item action', () => {
     const action = {
         type: 'ADD_HELP_ITEM',

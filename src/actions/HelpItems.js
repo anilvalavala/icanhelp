@@ -1,17 +1,50 @@
 import database from '../../firebase/firebase';
 
-const getHelpItem = (id = '') => ({
+export const getHelpItem = (id) => ({
     type: 'GET_HELP_ITEM',
     id
-})
+});
 
-const addHelpItem = (helpItem) => 
+export const startGetHelpItem = (id) => {
+    return (dispatch) => {
+        return database.ref(`helpItems/${id}`)
+                .once('value')
+                .then((snapshot) => {
+                    dispatch(getHelpItem(snapshot.key));
+                });
+    }
+};
+
+export const getAllHelpItems = (helpItems) => ({
+    type: 'GET_ALL_ITEMS',
+    helpItems
+});
+
+export const startGetAllHelpItems = () => {
+    return (dispatch) => {
+        return database.ref('helpItems')
+                .once('value')
+                .then((snapshot) => {
+                    const helpItems = [];
+
+                    snapshot.forEach((childSnapshot) => {
+                        helpItems.push({
+                            id: childSnapshot.key,
+                            ...childSnapshot.val()
+                        });
+                    });
+            dispatch(getAllHelpItems(helpItems))
+        });
+    };
+};
+
+export const addHelpItem = (helpItem) => 
 ({
     type: 'ADD_HELP_ITEM',
     helpItem
 });
 
-const startAddHelpItem = (helpItemData = {}) => {
+export const startAddHelpItem = (helpItemData = {}) => {
     return (dispatch) => {
         const {
             description = '',
@@ -34,22 +67,12 @@ const startAddHelpItem = (helpItemData = {}) => {
     };
 };
 
-const editHelpItem = (
-    helpItem  
-) => ({
+export const editHelpItem = (helpItem) => ({
     type: 'EDIT_HELP_ITEM',
     helpItem
 });
 
-const deleteHelpItem = (id) => ({
+export const deleteHelpItem = (id) => ({
     type: 'DELETE_HELP_ITEM',
     id
 });
-
-export { 
-    getHelpItem, 
-    addHelpItem, 
-    editHelpItem, 
-    deleteHelpItem, 
-    startAddHelpItem 
-};

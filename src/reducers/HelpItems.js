@@ -4,6 +4,8 @@ const helpItemsReducer = (state = [{}], action) => {
     switch(action.type){
         case 'GET_HELP_ITEM':
             return state.filter(item => item.id === action.id);
+        case 'GET_ALL_ITEMS':
+            return action.helpItems;
         case 'ADD_HELP_ITEM':
             return [
                 ...state,

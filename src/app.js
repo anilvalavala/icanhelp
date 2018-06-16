@@ -5,7 +5,7 @@ import uuid from 'uuid';
 import AppRouter from './routers/AppRouter';
 import applicationStore from './store/ApplicationStore';
 import filteredHelpItems from './selectors/HelpItems';
-import { getHelpItem, addHelpItem } from './actions/HelpItems';
+import { startGetAllHelpItems } from './actions/HelpItems';
 import { filterByText } from './actions/Filters';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -21,4 +21,9 @@ const JSX = () => {
     );
 };
 
-ReactDOM.render(<JSX />, document.getElementById('app'));
+ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+
+applicationStore.dispatch(startGetAllHelpItems()).then(() => {
+    ReactDOM.render(<JSX />, document.getElementById('app'));
+});
+

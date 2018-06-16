@@ -2,20 +2,64 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { 
     getHelpItem, 
+    getAllHelpItems,
     addHelpItem, 
     editHelpItem, 
     deleteHelpItem,
-    startAddHelpItem
+    startAddHelpItem,
+    startGetHelpItem,
+    startGetAllHelpItems
 } from '../../actions/HelpItems';
 import database from '../../../firebase/firebase';
+import TestHelpItems from '../fixtures/TestHelpItems';
 
 const createMockStore = configureMockStore([thunk]);
+
+beforeEach((done) => {
+    const newHelpItems = {};
+    TestHelpItems.forEach(({ id, title, description, fromDate, toDate, email, phone }) => {
+        newHelpItems[id] = { title, description, fromDate, toDate, email, phone }
+    })
+    database.ref('helpItems').set(newHelpItems).then(() => done());
+});
 
 test('Test getHelpItem action', () => {
     const result = getHelpItem('TEST');
     expect(result).toEqual({
         type: 'GET_HELP_ITEM',
         id: 'TEST'
+    });
+});
+
+test('Test asynchronous startGetHelpItem action', (done) => {
+   const mockStore = createMockStore({});
+    mockStore.dispatch(startGetHelpItem('1')).then(() => {
+        const actions = mockStore.getActions();
+        expect(actions[0]).toEqual({
+            type: 'GET_HELP_ITEM',
+            id: '1'
+        });
+        done();
+    });
+});
+
+test('Test getAllHelpItems action', () => {
+    const result = getAllHelpItems(TestHelpItems);
+    expect(result).toEqual({
+        type: 'GET_ALL_ITEMS',
+        helpItems: TestHelpItems
+    });
+})
+
+test('Test asynchronous startGetAllHelpItems action', (done) => {
+    const mockStore = createMockStore({});
+    mockStore.dispatch(startGetAllHelpItems()).then(() => {
+        const actions = mockStore.getActions();
+        expect(actions[0]).toEqual({
+            type: 'GET_ALL_ITEMS',
+            helpItems: TestHelpItems
+        });
+        done();
     });
 });
 
@@ -36,7 +80,7 @@ test('Test addHelpItem action', () => {
     });
 });
 
-test('Test asynchronous add help item', (done) => {
+test('Test asynchronous startAddHelpItem action', (done) => {
     const mockStore = createMockStore({});
 
     const newHelpItem = {

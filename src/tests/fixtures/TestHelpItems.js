@@ -3,7 +3,7 @@ import moment from 'moment';
 
 const TestHelpItems = [
     {
-        id: 1,
+        id: '1',
         title: 'Food',
         description: 'Food available', 
         fromDate: moment(0).subtract(1, 'days').valueOf(), 
@@ -12,7 +12,7 @@ const TestHelpItems = [
         phone: '9545947627'
     },
     {
-        id: 2,
+        id: '2',
         title: 'books',
         description: 'K.G books', 
         fromDate: moment(0).add(1, 'days').valueOf(), 
@@ -21,7 +21,7 @@ const TestHelpItems = [
         phone: '9545947627'
     },
     {
-        id: 3,
+        id: '3',
         title: 'Clothes',
         description: 'Clothes', 
         fromDate: moment(0).add(4, 'days').valueOf(), 
