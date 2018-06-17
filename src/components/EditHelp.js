@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { editHelpItem } from '../actions/HelpItems';
+import { startEditHelpItem } from '../actions/HelpItems';
 import HelpForm from './HelpForm';
 
 export class EditHelp extends React.Component {
     
     onSubmit = (helpItem) => {
-        this.props.editHelpItem(helpItem);
+        this.props.startEditHelpItem(helpItem);
         this.props.history.push('/');
     };
     render(){
@@ -43,7 +43,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        editHelpItem: (helpItem) => dispatch(editHelpItem(helpItem))
+        startEditHelpItem: (helpItem) => dispatch(startEditHelpItem(helpItem))
     };
 };
 

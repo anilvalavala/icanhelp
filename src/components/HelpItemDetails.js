@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import moment from 'moment';
 import { startDeleteHelpItem } from '../actions/HelpItems';
+import filteredHelpItems from '../selectors/HelpItems';
 
 export const HelpItemDetails = (props) => {
     return(
@@ -16,7 +17,7 @@ export const HelpItemDetails = (props) => {
                 Phone: {props.helpItem.phone} <br />
                 <button onClick={
                     () => {
-                        props.dispatch(startDeleteHelpItem(props.helpItem.id));
+                        props.startDeleteHelpItem(props.helpItem.id);
                     }
                 }>Delete</button>
             </div>

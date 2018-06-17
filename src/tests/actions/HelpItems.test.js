@@ -1,4 +1,5 @@
 import configureMockStore from 'redux-mock-store';
+import moment from 'moment';
 import thunk from 'redux-thunk';
 import { 
     getHelpItem, 
@@ -9,7 +10,8 @@ import {
     startAddHelpItem,
     startGetHelpItem,
     startGetAllHelpItems,
-    startDeleteHelpItem
+    startDeleteHelpItem,
+    startEditHelpItem
 } from '../../actions/HelpItems';
 import database from '../../../firebase/firebase';
 import TestHelpItems from '../fixtures/TestHelpItems';
@@ -111,19 +113,30 @@ test('Test asynchronous startAddHelpItem action', (done) => {
 })
 
 test('Test editHelpItem action', () => {
-    const helpItem = {
-        id: 1,
-        description: 'test',
-        fromDate: 123,
-        toDate: 321,
-        title: 'test',
+    const result = editHelpItem(TestHelpItems[1]);
+    expect(result).toEqual({
+        type: 'EDIT_HELP_ITEM',
+        helpItem: TestHelpItems[1]
+    });
+});
+
+test('Test asynchronous startEditHelpItem action', () => {
+    const mockStore = createMockStore({});
+    const editedHelpItem = {
+        id: '2',
+        title: 'books',
+        description: 'U.K.G books', 
+        fromDate: moment(0).add(1, 'days').valueOf(), 
+        toDate: moment(0).add(3, 'days').valueOf(), 
         email: 'anilkumar.v@hotmail.com',
         phone: '9545947627'
     }
-    const result = editHelpItem(helpItem);
-    expect(result).toEqual({
-        type: 'EDIT_HELP_ITEM',
-        helpItem
+    mockStore.dispatch(startEditHelpItem(editedHelpItem)).then(() => {
+        const actions = mockStore.getActions();
+        expect(actions[0]).toEqual({
+            type: 'EDIT_HELP_ITEM',
+            helpItem: editedHelpItem
+        });
     });
 });
 

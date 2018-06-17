@@ -72,6 +72,16 @@ export const editHelpItem = (helpItem) => ({
     helpItem
 });
 
+export const startEditHelpItem = (helpItem) => {
+    return (dispatch) => {
+        return database.ref(`helpItems/${helpItem.id}`)
+            .update(helpItem, () => {
+                dispatch(editHelpItem(helpItem));
+            });
+            
+    };
+};
+
 export const deleteHelpItem = (id) => ({
     type: 'DELETE_HELP_ITEM',
     id
