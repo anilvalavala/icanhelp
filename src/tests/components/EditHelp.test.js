@@ -21,5 +21,5 @@ test('Test EditHelp component to see if it is rendering correctly', () => {
 test('Test EditHelp component to see if it is being called with required parameters', () => {
     wrapper.find('HelpForm').prop('onSubmit')(TestHelpItems[0]);
     expect(startEditHelpItemSpy).toHaveBeenLastCalledWith(TestHelpItems[0]);
-    expect(historySpy.push).toHaveBeenLastCalledWith('/');
+    expect(historySpy.push).toHaveBeenLastCalledWith('/home');
 });

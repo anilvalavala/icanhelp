@@ -21,8 +21,9 @@ export const getAllHelpItems = (helpItems) => ({
 });
 
 export const startGetAllHelpItems = () => {
-    return (dispatch) => {
-        return database.ref('helpItems')
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        return database.ref(`users/${uid}/helpItems`)
                 .once('value')
                 .then((snapshot) => {
                     const helpItems = [];
@@ -45,7 +46,8 @@ export const addHelpItem = (helpItem) =>
 });
 
 export const startAddHelpItem = (helpItemData = {}) => {
-    return (dispatch) => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
         const {
             description = '',
             fromDate = 0,
@@ -58,7 +60,7 @@ export const startAddHelpItem = (helpItemData = {}) => {
         const helpItem = { description, fromDate, toDate, title, email, phone };
 
         //Here we're returning promise to allow promise chaining in test methods
-        return database.ref('helpItems').push(helpItem).then((ref) => {
+        return database.ref(`users/${uid}/helpItems`).push(helpItem).then((ref) => {
             dispatch(addHelpItem({
                 id: ref.key,
                 ...helpItem
@@ -73,8 +75,9 @@ export const editHelpItem = (helpItem) => ({
 });
 
 export const startEditHelpItem = (helpItem) => {
-    return (dispatch) => {
-        return database.ref(`helpItems/${helpItem.id}`)
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        return database.ref(`users/${uid}/helpItems/${helpItem.id}`)
             .update(helpItem, () => {
                 dispatch(editHelpItem(helpItem));
             });
@@ -88,8 +91,9 @@ export const deleteHelpItem = (id) => ({
 });
 
 export const startDeleteHelpItem = (id) => {
-    return (dispatch) => {
-        return database.ref(`helpItems/${id}`).remove().then(() => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        return database.ref(`users/${uid}/helpItems/${id}`).remove().then(() => {
             dispatch(deleteHelpItem(id))
         });
     };

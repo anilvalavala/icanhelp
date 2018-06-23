@@ -23,7 +23,8 @@ module.exports = (env) => {
     entry: './src/app.js',
     output: {
         filename: 'bundle.js',
-        path: path.join(__dirname, 'public', 'dist')
+        sourceMapFilename: 'bundle.js.map',
+        path: path.join(__dirname, 'public', 'dist'),
     },
     module: {
         rules:[
@@ -73,7 +74,7 @@ module.exports = (env) => {
     devServer: {
         contentBase: path.join(__dirname, 'public'),
         historyApiFallback: true,
-        publicPath: '/dist/'
+        publicPath: "/dist/"
     }
 }
 };

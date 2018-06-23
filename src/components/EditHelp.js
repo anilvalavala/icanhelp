@@ -7,7 +7,7 @@ export class EditHelp extends React.Component {
     
     onSubmit = (helpItem) => {
         this.props.startEditHelpItem(helpItem);
-        this.props.history.push('/');
+        this.props.history.push('/home');
     };
     render(){
         return(

@@ -9,14 +9,14 @@ exports[`Test Header compoenent 1`] = `
     replace={false}
     to="/"
   >
-    Home
+    Motive
   </Link>
   <Link
     className="header__link"
     replace={false}
-    to="/about"
+    to="/home"
   >
-    About
+    Find Help
   </Link>
   <Link
     className="header__link"
@@ -25,5 +25,15 @@ exports[`Test Header compoenent 1`] = `
   >
     Feedback
   </Link>
+  <Link
+    className="header__link"
+    replace={false}
+    to="/login"
+  >
+    Login
+  </Link>
+  <button>
+    Log Out
+  </button>
 </div>
 `;

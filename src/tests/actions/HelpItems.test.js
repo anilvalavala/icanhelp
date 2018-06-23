@@ -23,8 +23,10 @@ beforeEach((done) => {
     TestHelpItems.forEach(({ id, title, description, fromDate, toDate, email, phone }) => {
         newHelpItems[id] = { title, description, fromDate, toDate, email, phone }
     })
-    database.ref('helpItems').set(newHelpItems).then(() => done());
+    database.ref(`users/${uid}/helpItems`).set(newHelpItems).then(() => done());
 });
+
+const uid = "testuid";
 
 test('Test getHelpItem action', () => {
     const result = getHelpItem('TEST');
@@ -35,7 +37,7 @@ test('Test getHelpItem action', () => {
 });
 
 test('Test asynchronous startGetHelpItem action', (done) => {
-   const mockStore = createMockStore({});
+   const mockStore = createMockStore({ auth: { uid } });
     mockStore.dispatch(startGetHelpItem('1')).then(() => {
         const actions = mockStore.getActions();
         expect(actions[0]).toEqual({
@@ -55,7 +57,7 @@ test('Test getAllHelpItems action', () => {
 })
 
 test('Test asynchronous startGetAllHelpItems action', (done) => {
-    const mockStore = createMockStore({});
+    const mockStore = createMockStore({ auth: { uid }});
     mockStore.dispatch(startGetAllHelpItems()).then(() => {
         const actions = mockStore.getActions();
         expect(actions[0]).toEqual({
@@ -84,7 +86,7 @@ test('Test addHelpItem action', () => {
 });
 
 test('Test asynchronous startAddHelpItem action', (done) => {
-    const mockStore = createMockStore({});
+    const mockStore = createMockStore({ auth: { uid }});
 
     const newHelpItem = {
         description: 'From asynchronous unit test',
@@ -105,7 +107,7 @@ test('Test asynchronous startAddHelpItem action', (done) => {
             }
         });
 
-        return database.ref(`helpItems/${actions[0].helpItem.id}`).once('value');
+        return database.ref(`users/${uid}/helpItems/${actions[0].helpItem.id}`).once('value');
     }).then((snapshot) => {
         expect(snapshot.val()).toEqual(newHelpItem);
         done();
@@ -121,7 +123,7 @@ test('Test editHelpItem action', () => {
 });
 
 test('Test asynchronous startEditHelpItem action', () => {
-    const mockStore = createMockStore({});
+    const mockStore = createMockStore({ auth: {uid} });
     const editedHelpItem = {
         id: '2',
         title: 'books',
@@ -149,7 +151,7 @@ test('Test deleteHelpItem action', () => {
 });
 
 test('Test asynchronous startDeleteHelpItem action', (done) => {
-    const mockStore = createMockStore({});
+    const mockStore = createMockStore({ auth: { uid } });
     const itemToDelete = '1';
     mockStore.dispatch(startDeleteHelpItem(itemToDelete)).then(() => {
         const actions = mockStore.getActions();

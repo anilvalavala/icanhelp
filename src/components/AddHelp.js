@@ -6,7 +6,7 @@ import { startAddHelpItem } from '../actions/HelpItems';
 export class AddHelp extends React.Component {
     onSubmit = (helpItem) => {
         this.props.startAddHelpItem(helpItem);
-        this.props.history.push('/');
+        this.props.history.push('/home');
     };
     render(){
         return(
