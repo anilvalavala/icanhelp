@@ -1,0 +1,15 @@
+.button {
+    height: $s-size;
+    width: 3*$xl-size;
+    font-size: 1.5rem;
+    font-weight: 200;
+    background: #1c88bf;
+    color: #FAFAFA;
+    border: none;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    padding: 1.5rem 1.5rem;
+    margin-bottom: $s-size;
+}

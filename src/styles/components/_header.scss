@@ -12,6 +12,12 @@
     text-decoration: none;
     padding: 1.6rem;
     color: #922B21;
+    border: none;
+    background: #FDFEFE;
+}
+
+.header__link:focus {
+    outline: none;
 }
 
 .header__link:active {

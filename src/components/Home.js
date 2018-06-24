@@ -7,17 +7,18 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     return(
-        <div>
-            <div>
-                User Info
+        <div className="content-container">
+
+            <div className="page-header">
+                <p className="page-header__title">Donations Added</p>
             </div>
-            <Link to="/addHelp">Add Help</Link>
-            <div>Items added by current user (if logged in)</div>
+            <div className="page-header__actions">
+                <Link className="button" to="/addHelp">Add Help</Link>
+            </div>
             <div>
                 <HelpItemsFilters />
                 <HelpItems />
             </div>
-            <div>Testimonials</div>
         </div>
     );
 };
