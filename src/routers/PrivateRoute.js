@@ -11,9 +11,11 @@ export const PrivateRoute = ({
             isAuthenticated ? (
                 <Component {...props} />
             ) : (
-                <div>
-                    <h1>Please login to view the content</h1>
-                    <p>This page displays help added by you as well as others</p>
+                <div className="box-layout">
+                    <div className="box-layout__box">
+                        <h1>Please login to view the content</h1>
+                        <p className="box-layout__info">This page displays donations added by you as well as others</p>
+                    </div>
                 </div>
             )
         )} />

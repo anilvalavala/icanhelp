@@ -1,0 +1,39 @@
+.box-layout {
+    align-items: center;
+    height: 90vh;  //100% of viewport height
+    width: 90vw;   //100% of viewport width
+    display: flex;
+    justify-content: center;
+}
+
+.box-layout__box {
+    border-radius: 5px;
+    padding: $l-size $m-size;
+    text-align: center;
+    width: 60rem;
+    height: 15rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box-layout__title {
+    font-size: 1.2rem;
+    margin: 0 0 $m-size 0;
+    line-height: 1;
+}
+
+.box-layout__button {
+    height: 1.3*$xl-size;
+    width: 5*$xl-size;
+    font-size: 1.5rem;
+    font-weight: 200;
+    border-radius: 5px;
+    background: #1c88bf;
+    color: #FAFAFA;
+    border: none;
+}
+
+.box-layout__info {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+

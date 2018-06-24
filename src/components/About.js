@@ -7,9 +7,8 @@ const About = () => {
             <br />
             <p>
                 Yes, today the world is full of sophisticated computers, machines, devices, food, what not, everything. <br />
-                But still there are a section of people who are looking for help. <br />
-                The needs of those people can only be fulfilled by humanity. <br />
-                There are many people who wants to extend their helping hand to the society <br />
+                But still there are a section of people who are looking for help. <br /><br />
+                There are many people who want to extend their helping hand to the society <br />
                 But there is no bridge connecting such kind hearted people to the needy ones. <br /> <br />
 
                 So, this application is intended for those people who want to donate something. <br />

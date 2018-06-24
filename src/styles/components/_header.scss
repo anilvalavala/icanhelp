@@ -1,20 +1,19 @@
 .header {
-    background: firebrick;
-    margin-bottom: 4.8rem;
+    background: #FDFEFE;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     padding: 1.6rem 0;
-    color: white;
 }
 
 //BEM - Block Element Modifier
 .header__link {
-    font-weight: 700;
+    font-weight: 200;
     font-size: 1.6rem;
     margin: 0;
     text-decoration: none;
     padding: 1.6rem;
-    color: white;
+    color: #922B21;
 }
 
 .header__link:active {
-    color:#E0E0E0;
+    color:#D98880;
 }

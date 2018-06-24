@@ -5,8 +5,16 @@ import { startLogin } from '../actions/Auth';
 export class Login extends React.Component {
     render() {
         return(
-            <div>
-                <button onClick={this.props.startLogin}>Login</button>
+            <div className="box-layout">
+                <div className="box-layout__box">
+                    <p className="box-layout__title">
+                        Only google login is available currently
+                    </p>
+                    <button className="box-layout__button" 
+                        onClick={this.props.startLogin}>
+                        Login with your Google account
+                    </button>
+                </div>
             </div>
         );
     }
