@@ -4,36 +4,37 @@ exports[`Test Header compoenent 1`] = `
 <div
   className="header"
 >
-  <Link
-    className="header__link"
-    replace={false}
-    to="/"
+  <div
+    className="content-container"
   >
-    Motive
-  </Link>
-  <Link
-    className="header__link"
-    replace={false}
-    to="/home"
-  >
-    Find Help
-  </Link>
-  <Link
-    className="header__link"
-    replace={false}
-    to="/feedback"
-  >
-    Feedback
-  </Link>
-  <Link
-    className="header__link"
-    replace={false}
-    to="/login"
-  >
-    Login
-  </Link>
-  <button>
-    Log Out
-  </button>
+    <Link
+      className="header__link"
+      replace={false}
+      to="/"
+    >
+      Motive
+    </Link>
+    <Link
+      className="header__link"
+      replace={false}
+      to="/home"
+    >
+      Find Help
+    </Link>
+    <Link
+      className="header__link"
+      replace={false}
+      to="/feedback"
+    >
+      Feedback
+    </Link>
+    <Link
+      className="header__link"
+      replace={false}
+      to="/login"
+    >
+      Login
+    </Link>
+  </div>
 </div>
 `;

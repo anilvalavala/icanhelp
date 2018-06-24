@@ -1,9 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test Login component 1`] = `
-<div>
-  <button>
-    Login
-  </button>
+<div
+  className="box-layout"
+>
+  <div
+    className="box-layout__box"
+  >
+    <p
+      className="box-layout__title"
+    >
+      Only google login is available currently
+    </p>
+    <button
+      className="box-layout__button"
+    >
+      Login with your Google account
+    </button>
+  </div>
 </div>
 `;

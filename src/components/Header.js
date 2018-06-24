@@ -11,7 +11,7 @@ export const Header = ({ isAuthenticated, startLogout }) => {
         <Link className="header__link" to="/home">Find Help</Link>
         <Link className="header__link" to="/feedback">Feedback</Link>
         { !isAuthenticated && <Link className="header__link" to="/login">Login</Link> }
-        <button className="header__link" onClick={startLogout}>Log Out</button>
+        { isAuthenticated && <button className="header__link header__button" onClick={startLogout}>Log Out</button> }
     </div>
     </div>
     );

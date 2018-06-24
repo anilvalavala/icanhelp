@@ -16,6 +16,12 @@
     background: #FDFEFE;
 }
 
+.header__button {
+    line-height: 1.6rem;
+    height: $s-size;
+    padding: 0;
+}
+
 .header__link:focus {
     outline: none;
 }
